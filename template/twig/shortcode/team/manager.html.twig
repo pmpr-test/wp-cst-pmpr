@@ -1,0 +1,16 @@
+{% if manager is defined
+    and manager is not empty %}
+
+    <div class="pb-2 d-flex{% if not last %} border-2 border-bottom-dotted border-gray-300{% endif %}">
+        {{ render_user_data('avatar', manager, {
+            size: 96,
+            class: 'avatar-2xl rounded-circle',
+        })|raw }}
+        <div class="ml-4">
+            <div class="font-20 font-weight-bold">
+                {{ render_user_data('name', manager)|raw }}
+            </div>
+            {{ do_action('shortcode_team_user_info', manager, 1) }}
+        </div>
+    </div>
+{% endif %}

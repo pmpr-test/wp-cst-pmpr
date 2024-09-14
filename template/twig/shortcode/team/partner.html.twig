@@ -1,0 +1,11 @@
+{% if partner is defined
+    and partner is not empty %}
+
+    {{ render_user_data('avatar', partner, {
+        size: 72,
+        class: 'avatar-xl rounded-circle',
+    })|raw }}
+
+    {% set name = render_user_data('name', partner) %}
+    <span class="h6 limit-line max-line-1 my-2" title="{{ name|raw }}">{{ name|raw }}</span>
+{% endif %}

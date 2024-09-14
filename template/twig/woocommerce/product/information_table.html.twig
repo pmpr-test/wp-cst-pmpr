@@ -1,0 +1,17 @@
+{%- if items is defined and items is not empty %}
+    <div class="card text-center w-100 border-0 shadow-sm">
+        {% if title is defined and title is not empty %}
+            <div class="d-flex justify-content-between px-3 py-2 bg-gray-300 card-header">
+                <h3 class="font-18 font-weight-bold mb-0 text-secondary text-md-right">{{ title|raw }}</h3>
+                {% block after_title %}{% endblock %}
+            </div>
+        {% endif %}
+        <table class="table mb-0 bg-transparent w-100">
+            <tbody>
+            {% for item in items %}
+                {% block item_content %}{% endblock %}
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endif -%}

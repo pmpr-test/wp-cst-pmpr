@@ -1,0 +1,10 @@
+{% extends get_template('information_table', _self) %}
+
+{% block item_content %}
+    <li class="list-group-item border-0 p-0 font-13">
+        {% set title = render_post_data('title') %}
+         <a class="card-link mr-1" href="{{ render_post_data('url')|raw }}"
+           title="{{ title|esc_attr }}">{{ title|raw }}</a>
+    </li>
+{% endblock %}
+

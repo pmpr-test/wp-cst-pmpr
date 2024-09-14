@@ -1,0 +1,33 @@
+{% if title is defined and title is not empty %}
+    <h2 class="h3 mb-5 text-gray-900">{{ title|raw }}</h2>
+{% endif %}
+
+{% if description is defined and description is not empty %}
+    <p class="font-18 mb-5">{{ description|raw }}</p>
+{% endif %}
+
+<div class="row">
+    {% for team in teams %}
+        <div class="col-12 col-lg-6 col-xl-4">
+            <div class="card border-0 bg-transparent">
+                <div class="card-header bg-gray-400">
+                    <h3 class="h5 my-auto">{{ team.title|raw }}</h3>
+                </div>
+                <div class="card-body p-4">
+                    {% include get_template('manager', _self) with {
+                        manager: team.manager,
+                        last: 0
+                    } %}
+                    <div class="row border-2 border-bottom-dotted border-gray-300">
+                        {% for partner in team.partners %}
+                            <div class="col-4 col-sm-3 col-md-2 col-lg-3 col-xl-4 pt-2 text-center">
+                                {% include get_template('partner', _self) %}
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+

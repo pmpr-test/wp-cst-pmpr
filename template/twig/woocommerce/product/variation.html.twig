@@ -1,0 +1,6 @@
+<dl class="variation">
+    {% for item in items %}
+        <dt>{{ item.key|raw}}:</dt>
+        <dd>{{ item.display|raw }}</dd>
+    {% endfor %}
+</dl>

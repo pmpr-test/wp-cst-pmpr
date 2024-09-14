@@ -1,0 +1,24 @@
+{% extends get_template('information_table', _self) %}
+
+{% block after_title %}
+    {% if limit > 0 and items|length > limit %}
+        <a href="#" class="card-link font-13 m-0 p-0" data-target="tr.feature-{{ product|esc_attr }}"
+           data-toggle="collapse" data-replace="{{ close|raw|esc_attr }}">{{ more_items|raw }}</a>
+    {% endif %}
+{% endblock %}
+
+{% block item_content %}
+    <tr class="font-16 collapse{% if limit <= 0 or loop.index <= limit %} show{% else %} feature-{{ product|esc_attr }}{% endif %}">
+        {% set has_label = 0 %}
+        {% if item.label is not empty %}
+            {% set has_label = 1 %}
+            <th class="text-gray-800 text-right text-secondary py-2 pr-3 pl-0">
+                {{ item.label|raw }}
+            </th>
+        {% endif %}
+        <td class="text-gray-700 text-left font-weight-bold py-2 pl-3 pr-0"{% if not has_label %} colspan="2"{% endif %}>
+            {{ item.value|raw }}
+        </td>
+    </tr>
+{% endblock %}
+

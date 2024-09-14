@@ -1,0 +1,33 @@
+<div class="row align-items-center">
+    <div class="col-12 col-lg-7">
+        {% if title is not empty %}
+            <h2 class="h3 text-gray-900 mb-5">{{ title|raw }}</h2>
+        {% endif %}
+        <div class="row">
+            <div class="col-12 col-md-7">
+                {% if items is defined and items is not empty %}
+
+                    <ul class="list-group">
+                        {% for key, item in items %}
+                            <li class="list-group-item p-0 px-0 border-0 bg-transparent d-flex">
+                                <div class="d-flex mb-2">
+                                    <p class="h6 my-auto text-gray-700 pl-3">{{ item.text|raw }}</p>
+                                </div>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+            <div class="col-12 col-md-5 my-5 my-md-auto">
+                <div class="h1 mb-1 text-center text-primary">{{ year|number }}</div>
+                <div class="text-secondary text-center h5">{{ year_text|raw }}</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-lg-5 d-flex justify-content-center justify-content-lg-end">
+        {{ wp_get_attachment_image(image, 'large', {
+            class: 'img-fluid w-' ~ image_width|default(100) ~ ' h-100 m-auto mb-6 mb-lg-0',
+        })|raw }}
+    </div>
+</div>
+

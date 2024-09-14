@@ -1,0 +1,29 @@
+{% if items is defined and items is not empty %}
+    <div class="mt-0 mt-sm-4 my-md-0 mt-lg-4 my-xl-0">
+
+        {% set div_class = 'd-flex d-sm-inline-block d-md-flex d-lg-inline-block d-xl-flex pb-2' %}
+        {% for id, technology in items %}
+            {% set hide = loop.index > 6 %}
+            {% if loop.first %}
+                <div class="{{ div_class|esc_attr }}">
+            {% endif %}
+            <a href="{{ get_permalink(technology)|raw }}" rel="nofollow" title="{{ get_title(technology)|raw }}"
+               class="p1{% if hide %} d-block d-md-none d-lg-block d-xl-none{% endif %}">
+
+                {{ render_post_data('image', technology, {
+                    size: 'small',
+                    attrs: {class: 'icon-primary el-circle-' ~ (is_manager ? 'xs' : '2xs')}
+                })|raw }}
+
+            </a>
+            {% if loop.index % 3 == 0 and not loop.last %}
+                </div>
+                <div class="{{ div_class|esc_attr }}">
+            {% endif %}
+
+            {% if loop.last %}
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endif %}

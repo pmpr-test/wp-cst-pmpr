@@ -1,0 +1,16 @@
+{% if items is defined and items is not empty
+    and qualifications is defined and qualifications is not empty %}
+    <ul class="list-group list-group-flush w-100">
+        {% for slug, qualification in qualifications %}
+            {% set item = items[slug] %}
+            {% if item.grade is defined and item.grade is not empty %}
+                <li class="bg-transparent list-group-item{% if not loop.last %} border-gray-{{ is_average ? 400 : 200 }} border-bottom-dotted{% endif %} px-0 py-{{ is_average ? 2 : 1 }}">
+                    <div class="d-flex justify-content-between">
+                        <span class="align-self-center font-{{ is_average ? 20 : 15 }} mb-0 mr-1 {{ is_average ? 'h6' : '' }}">{{ qualification.title|esc_html }}</span>
+                        <span class="align-self-center statistic-{{ is_average ? 'lg' : 'md' }} grade-{{ item.grade|esc_attr }} lh-{{ is_average ? 'xl' : 'md' }}">{{ item.value|esc_html|number }}</span>
+                    </div>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+{% endif %}

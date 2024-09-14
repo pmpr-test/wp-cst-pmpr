@@ -1,0 +1,21 @@
+{{ button|raw }}
+<div class="modal fade {{ uniq_class|esc_attr }}" id="add_to_cart_modal_{{ product }}" tabindex="-1" role="dialog"
+     aria-labelledby="add_to_cart_modal_label_{{ product }}" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="add_to_cart_modal_label_{{ product }}">{{ title|raw }}</h5>
+                <a href="#" class="close card-link" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </a>
+            </div>
+            <div class="modal-body">{{ content|raw }}</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary"
+                        data-dismiss="modal">{{ close_text|raw }}</button>
+                {{ add_to_cart|raw }}
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,11 @@
+<div class="text-gray-500 d-flex justify-content-around">
+    {% for item in items %}
+        <a href="" rel="nofollow" class="text-none-decoration text-center text-gray-300 hover-gray-200">
+            {{ render_post_data('image', item, {
+                size: '65x65',
+                attrs: {class: 'el-circle-sm m-auto icon-gray-400'}
+            })|raw }}
+        </a>
+    {% endfor %}
+</div>
+

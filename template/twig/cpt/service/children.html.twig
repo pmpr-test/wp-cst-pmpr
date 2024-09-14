@@ -1,0 +1,31 @@
+{% if items is defined
+    and items is not empty %}
+    <section class="py-5 py-md-8 bg-{{ background|default('transparent') }}">
+        <div class="container">
+            {% if title is defined and title is not empty %}
+                <h2 class="h3 mb-6 text-center">{{ title }}</h2>
+            {% endif %}
+            <div class="row">
+                {% set columns = "col-12 col-sm-2 col-md-4" %}
+                {% for item in items %}
+                    <div class="{{ columns|esc_attr }} {{ card_bottom_margin(loop, columns, margin_bottom|default(6)) }}">
+                        <div class="card bg-transparent">
+                            {% set icon = render_post_data('icon', item) %}
+                            {% if icon is not empty %}
+                                {{ render_icon(icon, {class: 'icon-info icon-sm mb-4 mx-auto'}) }}
+                            {% endif %}
+                            {% set title = render_post_data('title', item) %}
+                            {% if title is not empty %}
+                                <a class="card-body text-center card-link" title="{{ title|esc_attr }}"
+                                   href="{{ render_post_data('permalink', item) }}">
+                                    <span class="h6">{{ title|raw }}</span>
+                                </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endif %}
+

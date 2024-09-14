@@ -1,0 +1,46 @@
+{% if items is defined
+    and items is not empty %}
+
+    {% set childless = [] %}
+
+    {% for parent in items %}
+
+        {% if parent.children is defined
+            and parent.children is not empty %}
+
+            {% set childCount = parent.children|length %}
+            {% set isRight = loop.index % 2 == 0 %}
+
+            <section class="py-5 py-md-8 bg-{{ isRight ? 'gray-100' : 'transparent' }}"
+                     id="parent-{{ parent.ID|esc_attr }}">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-8 mb-6 mb-lg-0">
+                            <h2 class="h4">{{ render_post_data('title', parent)|raw }}</h2>
+                            <div class="card-text text-justify">
+                                {{ render_post_data('desc', parent)|raw }}
+                            </div>
+                            <a href="{{ render_post_data('permalink', parent)|raw }}"
+                               class="btn btn-sm btn-outline-secondary float-right mt-4">
+                                {{ more_information|default(__('More Information', constant('PR__CST__PMPR'))) }}
+                            </a>
+                        </div>
+                        <div class="col-12 col-lg-4 order-2">
+                            {{ do_action('render_service_children', {
+                                post: parent,
+                                type: 'children_simple_list',
+                                children: parent.children,
+                                image_class: 'icon-xs icon-primary',
+                                title_class: 'font-16',
+                                link_class: 'my-1 ml-0',
+                            }) }}
+                        </div>
+                    </div>
+                </div>
+            </section>
+        {% else %}
+
+            {% set childless = childless|merge([parent]) %}
+        {% endif %}
+    {% endfor %}
+{% endif %}

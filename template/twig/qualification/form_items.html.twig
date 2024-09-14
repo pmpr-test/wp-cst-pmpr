@@ -1,0 +1,16 @@
+{% if items is defined and items is not empty %}
+    <ul class="list-group list-group-flush w-100">
+        {% for slug, item in items %}
+            <li class="list-group-item bg-transparent px-0 py-2{% if loop.last %} border-0{% endif %}"
+                id="qualification-{{ slug|esc_attr }}">
+                <div class="d-flex justify-content-between">
+                    <span class="font-13">{{ item.title|esc_html }}</span>
+                    {% include get_template('type/' ~ item.type) with {
+                        name: slug
+                    } %}
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+    {{ wp_nonce_field(nonce, nonce, 0)|raw }}
+{% endif %}

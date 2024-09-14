@@ -1,0 +1,6 @@
+{% if caption is defined and caption is not empty and is_manager %}
+    <p class="lh-md font-16 m-0">{{ caption|raw }}</p>
+{% endif %}
+{% if education is defined and education is not empty %}
+    <p class="lh-md font-13 m-0">{{ education|raw }}</p>
+{% endif %}

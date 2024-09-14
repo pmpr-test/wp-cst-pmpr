@@ -1,0 +1,7 @@
+<?php
+/*   _______________________________________
+    |  Obfuscated by PMPR - Php Obfuscator  |
+    |             66e5e7826d11c             |
+    |_______________________________________|
+*/
+ namespace Pmpr\Custom\Pmpr\Shortcode; use Pmpr\Common\Foundation\Interfaces\Constants; use Pmpr\Common\Foundation\Interfaces\IconInterface; use Pmpr\Module\AdvancedCMS\Shortcode\Post\Post; class Service extends Post { const iwagoquioqacekqo = "\163\145\x72\166\151\143\145\x73"; public function gogaagekwoisaqgu() { $this->icon = IconInterface::gyycksgqsoogiayq; $this->title = __("\123\145\162\166\151\143\145", PR__CST__PMPR); } public function gkoiuyagqcoecigk() { parent::gkoiuyagqcoecigk(); add_shortcode("\x62\157\x69\154\x65\x72\137{$this->aakmagwggmkoiiyu()}\x5f\x6d\x75\x6c\164\x69\x70\154\x65", [$this, "\157\163\x65\x61\x63\161\151\x6d\145\143\x77\x67\x67\141\x6b\167"]); } public function ecwgiiuacoaokqkw() { $this->aucimgwswmgaocae($this->kwosaecaikgmoeyo()->mkksewyosgeumwsa(self::ymuegqgyuagyucws(Constants::qescuiwgsyuikume, __("\x54\151\164\x6c\145", PR__CST__PMPR))->iyouqgqicyqkiswi(6))->mkksewyosgeumwsa(self::ckuwucygcwsiawms(self::iwagoquioqacekqo, __("\123\145\162\x76\x69\143\145\x73", PR__CST__PMPR))->oikgogcweiiaocka()->eukmukacucooequu(["\160\141\x72\145\156\x74" => 0])->oeewiaacscgyamai("\163\x65\162\166\x69\x63\x65")->iyouqgqicyqkiswi(6))->mkksewyosgeumwsa(self::sciaycsmsiekqueg(Constants::eqkeooqcsscoggia, __("\x44\x65\x73\x63\x72\x69\x70\x74\x69\x6f\156", PR__CST__PMPR)))); } }

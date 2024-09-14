@@ -1,0 +1,18 @@
+{% if items is defined
+    and items is not empty %}
+    {% for item in items %}
+        {% set title = render_post_data('title', item) %}
+        <a title="{{ title|raw|esc_attr }}"
+           class="d-flex card-link {{ link_class|esc_attr }}"
+           href="{{ render_post_data('permalink', item) }}">
+
+            {% set icon = render_post_data('icon', item) %}
+            {% if icon is not empty %}
+                {{ render_icon(icon, {class: image_class ~ ' my-auto mr-2'}) }}
+            {% endif %}
+
+            <span class="my-auto limit-line max-line-1 {{ title_class|esc_attr }}">{{ title|raw }}</span>
+        </a>
+    {% endfor %}
+{% endif %}
+

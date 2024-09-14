@@ -1,0 +1,21 @@
+{% if terms is defined and terms is not empty
+    and taxonomies is defined and taxonomies is not empty %}
+    <ul class="list-group list-group-flush">
+        {% for term in terms %}
+            {% if term.taxonomy in taxonomies|keys %}
+                {% set taxonomy = taxonomies[term.taxonomy] %}
+                <li class="bg-transparent list-group-item{% if not loop.last %} border-gray-200 border-bottom-dotted{% endif %} px-0 py-2">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex">
+                            {{ get_icon(taxonomy.icon, {
+                                class: 'my-auto icon-primary icon-xs'
+                            })|raw }}
+                            <span class="align-self-center font-15 mb-0 mr-2">{{ taxonomy.singular|esc_html }}</span>
+                        </div>
+                        <span class="align-self-center font-15">{{ term.name|esc_html }}</span>
+                    </div>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+{% endif %}

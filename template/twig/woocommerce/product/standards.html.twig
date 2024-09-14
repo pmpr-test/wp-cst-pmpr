@@ -1,0 +1,9 @@
+{% extends get_template('information_table', _self) %}
+
+{% block item_content %}
+    <tr class="font-16">
+        <th class="text-gray-800 text-right text-secondary py-2 pr-3 pl-0">{{ item.label|raw }}</th>
+        <td class="text-gray-700 text-left font-weight-bold py-2 pl-3 pr-0">{{ item.value|raw }}</td>
+    </tr>
+{% endblock %}
+
