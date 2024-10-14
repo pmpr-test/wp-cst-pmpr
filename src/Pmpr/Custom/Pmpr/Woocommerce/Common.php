@@ -1,7 +1,7 @@
 <?php
 /*   _______________________________________
     |  Obfuscated by PMPR - Php Obfuscator  |
-    |             670517558c138             |
+    |             670d000c42857             |
     |_______________________________________|
 */
- namespace Pmpr\Custom\Pmpr\Woocommerce; use Pmpr\Common\Foundation\Interfaces\Constants; use Pmpr\Custom\Pmpr\Container; class Common extends Container { public function aqasygcsqysmmyke() : int { $product = $this->caokeucsksukesyo()->giiecckwoyiawoyy()->ayueggmoqeeukqmq(Constants::kqigmeickowqiiyy); if ($product) { goto uegouoiuyoqkcscg; } $product = $this->caokeucsksukesyo()->aqasygcsqysmmyke()->iooowgsqoyqseyuu(); uegouoiuyoqkcscg: return absint($product); } }
+ namespace Pmpr\Custom\Pmpr\Woocommerce; use Pmpr\Common\Foundation\Interfaces\Constants; use Pmpr\Custom\Pmpr\Container; class Common extends Container { public function aqasygcsqysmmyke() : int { $product = $this->caokeucsksukesyo()->giiecckwoyiawoyy()->ayueggmoqeeukqmq(Constants::kqigmeickowqiiyy); if (!$product) { $product = $this->caokeucsksukesyo()->aqasygcsqysmmyke()->iooowgsqoyqseyuu(); } return absint($product); } }
