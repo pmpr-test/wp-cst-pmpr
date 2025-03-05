@@ -1,7 +1,7 @@
 <?php
 /*   _______________________________________
     |  Obfuscated by PMPR - Php Obfuscator  |
-    |             67c839bd07d61             |
+    |             67c83a3fcaf33             |
     |_______________________________________|
 */
  namespace Pmpr\Custom\Pmpr\CPT; use Pmpr\Common\Foundation\Interfaces\Constants; class Technology extends Common { const eqsowmiaaaomcgam = 'show_on_footer'; public function mgoeqkosywwaoqyw() { parent::mgoeqkosywwaoqyw(); $this->oyeskqayoscwciem()->wsekoqmcyeuyegam()->usuqmwksoeaayaig('technology')->muuwuqssqkaieqge(__('Technologies', PR__CST__PMPR))->yioesawwewqaigow('dashicons-admin-generic')->guiaswksukmgageq(__('Technology', PR__CST__PMPR))->acqyqaaeeogkosoq(Constants::ocsomysosuqaimuc)->ckaeqgiaiqwsccke(19)->gucwmccyimoagwcm(__('Technology post type', PR__CST__PMPR))->wakugsseussemkka(['title', 'editor', 'excerpt', 'comments', 'thumbnail', 'subtitles', 'page-attributes']); } public function qyecwywaoyamkmci() { $uuyucgkyusckoaeq = $this->caokeucsksukesyo()->wmkogisswkckmeua(); $igokgowyqagkusig = $uuyucgkyusckoaeq->wcwmusaouiqaqeww(self::eqsowmiaaaomcgam)->gswweykyogmsyawy(__('Show on footer', PR__CST__PMPR)); $igokgowyqagkusig->kakecegieeqyyayu()->qigsyyqgewgskemg('label-as-desc'); $this->sikqggwmmykuiymy($uuyucgkyusckoaeq->scyscgskcwukckyy('metadata')->gswweykyogmsyawy(__('Icon', PR__CST__PMPR))->ewweaossowcqywaw($this->cwiyqyuayeqieick())->qqqycgoaysysgiqm()->mkksewyosgeumwsa($igokgowyqagkusig)); } }
