@@ -1,7 +1,7 @@
 <?php
 /*   _______________________________________
     |  Obfuscated by PMPR - Php Obfuscator  |
-    |             67d9d4b575e4c             |
+    |             6800f6fea98df             |
     |_______________________________________|
 */
  namespace Pmpr\Custom\Pmpr\Panel; use Pmpr\Common\Foundation\Interfaces\IconInterface; use Pmpr\Module\Panel\AbstractPanel; class Panel extends AbstractPanel { public function __construct() { $this->name = 'module'; parent::__construct(); } public function gigwcakmiyayoigw() { } public function sqwgomwcqysewuks($mkucggyaiaukqoce) : array { return [$this->oeuiuocwuggewqmk($this->aakmagwggmkoiiyu())->faioisokmmaeimoo()->jyumyyugiwwiqomk(100)->gswweykyogmsyawy(__('Modules', PR__CST__PMPR))->saemoowcasogykak(IconInterface::csoyqymugwqiggki)]; } }
