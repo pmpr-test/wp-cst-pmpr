@@ -1,7 +1,7 @@
 <?php
 /*   _______________________________________
     |  Obfuscated by PMPR - Php Obfuscator  |
-    |             68dda1c00115f             |
+    |             68dda3c561b9d             |
     |_______________________________________|
 */
  namespace Pmpr\Custom\Pmpr\Shortcode; use Pmpr\Common\Foundation\Interfaces\Constants; use Pmpr\Common\Foundation\Interfaces\IconInterface; use Pmpr\Module\AdvancedCMS\Shortcode\Segment; class Team extends Segment { public function __construct() { $this->target = self::iswqqwqguucescay; parent::__construct(); } public function gogaagekwoisaqgu() { $this->icon = IconInterface::nweaiemiyieyyuwk; $this->title = __('Team', PR__CST__PMPR); } public function ecwgiiuacoaokqkw() { $this->aucimgwswmgaocae($this->kwosaecaikgmoeyo()->ewweaossowcqywaw($this->swoqymqskqesekok())->mkksewyosgeumwsa(self::iseogkiymousogom('teams', __('Teams', PR__CST__PMPR))->mkksewyosgeumwsa(self::ymuegqgyuagyucws(Constants::qescuiwgsyuikume, __('Team Title', PR__CST__PMPR)))->mkksewyosgeumwsa(self::ckuwucygcwsiawms('manager', __('Manager', PR__CST__PMPR))->soyqkauogoaqekos()->ccmwycqioaicegoc(__('Select a user as manager', PR__CST__PMPR)))->mkksewyosgeumwsa(self::ckuwucygcwsiawms('partners', __('Partners', PR__CST__PMPR))->soyqkauogoaqekos()->oikgogcweiiaocka()->ccmwycqioaicegoc(__('Select some users as partners', PR__CST__PMPR)))->usosgsaaimqcysyk())); } public function kyaweigsqwomykaa($wwgucssaecqekuek = []) : array { $mmeioagwmyscwumo = 1; return parent::kyaweigsqwomykaa($wwgucssaecqekuek); } }
